@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>calculate</title>
+</head>
+<body>
+  <form action="/count/" method="post">
+      {% csrf_token %}
+    <input type="number" placeholder="no1" name="t1"><br><br>
+    <input type="number" placeholder="no1" name="t2"><br><br><br><br><br>
+    <button type="submit" value="add" name="b1"> + </button>
+    <button type="submit" value="sub" name="b1"> - </button>
+    <button type="submit" value="mul" name="b1"> * </button>
+    <button type="submit" value="div" name="b1"> / </button><br><br>
+  </form>
+
+
+  {% if res %}
+    <h1>Result = {{ res }}</h1>
+  {% endif %}
+</body>
+</html>
